@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeCrudNoAuthentication", "EmployeeCrudNoAuthentication.csproj", "{C451AE3F-D56B-4802-B388-088CF82EC370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeAPI", "..\EmployeeAPI\EmployeeAPI.csproj", "{3BAC337F-3CE2-4381-B9D7-EE1C5369CB3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C451AE3F-D56B-4802-B388-088CF82EC370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C451AE3F-D56B-4802-B388-088CF82EC370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C451AE3F-D56B-4802-B388-088CF82EC370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C451AE3F-D56B-4802-B388-088CF82EC370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BAC337F-3CE2-4381-B9D7-EE1C5369CB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BAC337F-3CE2-4381-B9D7-EE1C5369CB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BAC337F-3CE2-4381-B9D7-EE1C5369CB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BAC337F-3CE2-4381-B9D7-EE1C5369CB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFAFA5B4-141F-4368-9074-D44D55C95DB8}
+	EndGlobalSection
+EndGlobal

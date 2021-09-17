@@ -1,0 +1,87 @@
+﻿@model IEnumerable<EmployeeCrudNoAuthentication.Models.Employee>
+
+<link href="~/css/DataTable.css" rel="stylesheet" />
+@*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">*@
+<script src="~/js/Jquery.js"></script>
+<script src="~/js/DataTable.js"></script>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Indextest</title>
+</head>
+<body>
+    <div id="tableDiv">
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table id="myTable" class="display">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeSalary)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeSalary)
+                        </td>
+                        <td>
+                            <input type="button" value="Edit" onclick="editEmp(@item.Id)" />|
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<div id="editDiv">
+
+</div>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+    function editEmp(id) {
+        debugger;
+       $.ajax({
+           type: "GET",
+           url: "/Home/editAjax",
+           data: { id: id},
+           success: function (result) {             
+            //   console.log(result);
+               $('#tableDiv').html('');
+               $('#editDiv').html(result);
+           },
+           error: function (result) {
+               alert("error");
+               console.log(result);
+           }
+       });
+    };
+</script>
